@@ -115,8 +115,8 @@ export default function Rules() {
         </p>
         <p>
           Multiplier Echoes and Coin Count Echoes stack, so at the end of each
-          turn, the total Quota added to the player's score is calculated as
-          follows:{" "}
+          turn, the total Quota added to the player&apos;s score is calculated
+          as follows:{" "}
         </p>
         <p className={styles.formula}>
           <var>number of Border Coins used</var> +{" "}
