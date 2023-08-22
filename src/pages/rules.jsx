@@ -118,7 +118,7 @@ export default function Rules() {
           turn, the total Quota added to the player&apos;s score is calculated
           as follows:{" "}
         </p>
-        <p className={styles.formula}>
+        <p className={`${styles.formula} ${styles.long}`}>
           <var>number of Border Coins used</var> +{" "}
           <var>number of Border Coins used</var> * <var>Coin Count Echo</var> +{" "}
           <var>multiplier</var> * <var>Multiplier Echo</var>
