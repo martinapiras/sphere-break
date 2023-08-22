@@ -1,0 +1,68 @@
+@mixin flexbox-hrz($gap) {
+  display: flex;
+  flex-direction: row;
+  justify-content: safe center;
+  align-items: safe center;
+  gap: $gap;
+}
+
+@mixin flexbox-vrt($gap) {
+  display: flex;
+  flex-direction: column;
+  justify-content: safe center;
+  align-items: safe center;
+  gap: $gap;
+}
+
+@mixin flexbox-hrz-space-between() {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flexbox-vrt-space-between() {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin target($color) {
+  border: 2px solid $color;
+}
+
+@mixin dimensions($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+@mixin subtitle($size) {
+  font-size: $size;
+  font-weight: 600;
+}
+
+@mixin title($size) {
+  font-size: $size;
+  font-weight: 700;
+}
+
+@mixin button {
+  border: 1px solid $color-primary;
+  background-color: $color-primary;
+  color: $color-secondary;
+  @include subtitle($base-text);
+  padding: $padding-lg;
+  border-radius: $border-radius-2;
+  cursor: pointer;
+  transition: all 0.35s ease-in-out;
+
+  &:hover {
+    background-color: white;
+    color: $color-primary;
+  }
+
+  &:active {
+    transform: scale(1.1);
+  }
+}

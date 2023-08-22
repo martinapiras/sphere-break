@@ -1,0 +1,51 @@
+.Button {
+  border: 2px solid rgba(19, 29, 40, 0.8);
+  width: fit-content;
+  height: 40px;
+  padding: $padding-md;
+  cursor: pointer;
+  background: rgb(19, 29, 40);
+  background: linear-gradient(
+    135deg,
+    rgba(19, 29, 40, 0.8) 0%,
+    rgba(40, 52, 71, 0.75) 50%,
+    rgba(32, 42, 61, 0.8) 100%
+  );
+  backdrop-filter: blur(10px);
+  @include flexbox-hrz(15px);
+  margin: 0 auto;
+  transition: all 0.35s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  .icon {
+    color: $color-pointer;
+    height: 100%;
+    @extend %center-content;
+    animation: move 1s infinite;
+
+    svg {
+      transform: rotate(45deg);
+    }
+  }
+
+  .text {
+    @extend %center-content;
+    height: 100%;
+    color: white;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(7px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

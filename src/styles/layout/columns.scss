@@ -1,0 +1,87 @@
+.col-1 {
+  width: column(1);
+}
+
+.col-2 {
+  width: column(2);
+}
+
+.col-3 {
+  width: column(3);
+}
+
+.col-4 {
+  width: column(4);
+}
+
+.col-5 {
+  width: column(5);
+}
+
+.col-6 {
+  width: column(6);
+}
+
+.col-7 {
+  width: column(7);
+}
+
+.col-8 {
+  width: column(8);
+}
+
+.col-9 {
+  width: column(9);
+}
+
+.col-10 {
+  width: column(10);
+}
+
+.col-11 {
+  width: column(11);
+}
+
+.col-12 {
+  width: column(12);
+}
+
+// mobile
+@include xs {
+  .col-xs-1 {
+    width: column(1);
+  }
+  .col-xs-2 {
+    width: column(2);
+  }
+  .col-xs-3 {
+    width: column(3);
+  }
+  .col-xs-4 {
+    width: column(4);
+  }
+  .col-xs-5 {
+    width: column(5);
+  }
+  .col-xs-6 {
+    width: column(6);
+  }
+  .col-xs-7 {
+    width: column(7);
+  }
+  .col-xs-8 {
+    width: column(8);
+  }
+  .col-xs-9 {
+    width: column(9);
+  }
+  .col-xs-10 {
+    width: column(10);
+  }
+  .col-xs-11 {
+    width: column(11);
+  }
+  .col-xs-12 {
+    width: column(12);
+  }
+}

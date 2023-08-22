@@ -1,0 +1,58 @@
+.Rules {
+  & > * {
+    width: 100%;
+  }
+
+  text-align: justify;
+  @include flexbox-vrt(10px);
+  padding: $padding-gen;
+
+  .title,
+  h2,
+  h3 {
+    text-align: center;
+  }
+
+  .icon {
+    width: 50px;
+    height: 50px;
+    @extend %center-content;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+
+    svg {
+      width: 50%;
+      height: auto;
+    }
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+
+  .formula {
+    padding: $padding-lg;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    width: 90%;
+    @include flexbox-hrz(5px);
+    text-align: center;
+
+    @include lg {
+      width: 50%;
+      margin: 0 auto;
+    }
+
+    @include xl {
+      width: 50%;
+      margin: 0 auto;
+    }
+
+    @include xxl {
+      width: 50%;
+      margin: 0 auto;
+    }
+  }
+}

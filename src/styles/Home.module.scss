@@ -1,0 +1,298 @@
+.Home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .title {
+    text-align: center;
+    padding: $padding-md;
+  }
+
+  .gameArea {
+    @include flexbox-vrt(15px);
+
+    @include md {
+      min-height: 80dvh;
+    }
+
+    @include lg {
+      @include flexbox-hrz(10px);
+      flex-wrap: wrap;
+    }
+    @include xl {
+      @include flexbox-hrz(30px);
+      min-height: 80dvh;
+      flex-wrap: wrap;
+    }
+    @include xxl {
+      @include flexbox-hrz(30px);
+      min-height: 70dvh;
+      flex-wrap: wrap;
+    }
+
+    .ButtonWrapper {
+      @include lg {
+        position: fixed;
+        left: 25%;
+        bottom: 25%;
+      }
+      @include xl {
+        position: fixed;
+        left: 22%;
+        bottom: 25%;
+      }
+      @include xxl {
+        position: fixed;
+        left: 30%;
+        bottom: 40%;
+      }
+    }
+
+    .ButtonContainer {
+      @include lg {
+        position: fixed;
+        bottom: 10%;
+      }
+      @include xl {
+        position: fixed;
+        bottom: 10%;
+      }
+      @include xxl {
+        position: fixed;
+        bottom: 10%;
+      }
+    }
+
+    .dataInputs {
+      @include flexbox-vrt(10px);
+
+      .dataInput {
+        @include flexbox-hrz(20px);
+        padding: $padding-gen;
+
+        @include lg {
+          width: 90%;
+        }
+        @include xl {
+          width: 90%;
+        }
+        @include xxl {
+          width: 90%;
+        }
+
+        label {
+          width: 50%;
+          font-size: 0.9rem;
+          text-align: center;
+        }
+
+        input {
+          width: 50%;
+        }
+      }
+    }
+
+    .gameData {
+      @include flexbox-vrt(0);
+      height: 400px;
+
+      @include xs {
+        height: auto;
+      }
+
+      @include md {
+        height: 420px;
+      }
+
+      .settings,
+      .turnInfo,
+      .comboInfo {
+        padding: $padding-gen;
+        @include flexbox-vrt(5px);
+        background-color: $color-bg;
+        background-image: url("../assets/img/bg.jpg");
+        background-size: cover;
+        color: white;
+        box-shadow: 0 0 4px black;
+        border: 2px solid #523324;
+
+        @include md {
+          width: 420px;
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+
+      .settings {
+        @include lg {
+          height: 30%;
+        }
+        @include xl {
+          height: 30%;
+        }
+        @include xxl {
+          height: 30%;
+        }
+
+        .time {
+          color: $color-blue;
+        }
+      }
+
+      .sum,
+      .quota {
+        color: $color-pointer;
+      }
+
+      .turnInfo,
+      .comboInfo {
+        text-align: center;
+
+        .multPar {
+          @include flexbox-vrt(5px);
+
+          .multiples {
+            @include flexbox-hrz(20px);
+
+            span:first-child {
+              color: $color-pointer;
+            }
+          }
+        }
+      }
+
+      .turnInfo {
+        @include lg {
+          height: 20%;
+        }
+        @include xl {
+          height: 20%;
+        }
+        @include xxl {
+          height: 20%;
+        }
+      }
+
+      .comboInfo {
+        @include lg {
+          height: 50%;
+        }
+        @include xl {
+          height: 50%;
+        }
+        @include xxl {
+          height: 50%;
+        }
+
+        .line {
+          width: 55%;
+          height: 2px;
+          border-radius: 50%;
+          background-color: $color-bronze;
+          opacity: 0.5;
+          margin: 10px 0;
+        }
+
+        .comboName {
+          position: relative;
+          background-color: $color-gold-bg;
+          padding: 0 10px;
+
+          &::after {
+            content: "";
+            width: 100%;
+            height: 3px;
+            background-color: $color-gold;
+            border-radius: 50%;
+            position: absolute;
+            top: -3px;
+            left: 0;
+          }
+
+          &::before {
+            content: "";
+            width: 100%;
+            height: 3px;
+            background-color: $color-gold;
+            border-radius: 50%;
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+          }
+        }
+      }
+    }
+
+    .table {
+      margin: 0 auto;
+      height: 325px;
+      @include flexbox-vrt-space-between;
+      padding: $padding-gen;
+      position: relative;
+      background-color: $color-bg;
+      background-image: url("../assets/img/bg.jpg");
+      background-size: auto;
+
+      .row {
+        @include flexbox-hrz(25px);
+      }
+
+      @include md {
+        width: 420px;
+        height: 420px;
+        background-size: cover;
+        margin: 0;
+      }
+      @include lg {
+        height: 400px;
+        background-size: cover;
+        margin: 0;
+      }
+      @include xl {
+        height: 400px;
+        background-size: cover;
+        margin: 0;
+      }
+      @include xxl {
+        height: 400px;
+        background-size: cover;
+        margin: 0;
+      }
+    }
+  }
+
+  .rules {
+    text-align: center;
+    padding: $padding-lg;
+    @extend %center-content;
+
+    @include xs {
+      height: 150px;
+    }
+
+    @include lg {
+      margin-top: 4%;
+    }
+  }
+
+  .footer {
+    padding: $padding-md;
+    text-align: center;
+    z-index: 10;
+    position: fixed;
+    bottom: 0;
+
+    @include lg {
+      text-align: right;
+    }
+    @include xl {
+      text-align: right;
+    }
+    @include xxl {
+      margin: 0 auto;
+      text-align: right;
+      max-width: 1440px;
+    }
+  }
+}

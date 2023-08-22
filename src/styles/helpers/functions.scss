@@ -1,0 +1,6 @@
+@use "sass:math";
+
+$columnCount: 12;
+@function column($col) {
+  @return math.div(100%, $columnCount) * $col;
+}
