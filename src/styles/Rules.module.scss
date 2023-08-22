@@ -37,20 +37,28 @@
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
     width: 90%;
-    @include flexbox-hrz(5px);
     text-align: center;
 
+    &.long {
+      @include xs {
+        @include flexbox-vrt(5px);
+      }
+    }
+
     @include lg {
+      @include flexbox-hrz(5px);
       width: 50%;
       margin: 0 auto;
     }
 
     @include xl {
+      @include flexbox-hrz(5px);
       width: 50%;
       margin: 0 auto;
     }
 
     @include xxl {
+      @include flexbox-hrz(5px);
       width: 50%;
       margin: 0 auto;
     }
